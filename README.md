@@ -1,6 +1,6 @@
-# DJ-DETR
+# BMR-DETR
 
-Official PyTorch implementation of **"DJ-DETR: Real-Time Tomato Leaf Disease Detection via Bidirectional Context Modeling and Gradient-Aware Perception"**
+Official PyTorch implementation of **"BMR-DETR: A Real-Time Tomato Leaf Disease Detection Model for Edge Device Deployment"**
 
 [![Paper](https://img.shields.io/badge/Paper-The%20Visual%20Computer-blue)](https://link.springer.com/journal/371)
 [![Python 3.8+](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
@@ -24,13 +24,13 @@ Tomato foliar diseases pose a significant threat to crop yield and food safety w
 
 | Model | mAP | mAP50 | mAP75 | Latency |
 |-------|-----|-------|-------|---------|
-| DJ-DETR (Ours) | **62.98%** | **78.91%** | **68.52%** | 54ms |
+| BMR-DETR (Ours) | **62.98%** | **78.91%** | **68.52%** | 54ms |
 
 ### Cross-Domain Generalization (PlantDoc)
 
 | Model | mAP50 |
 |-------|-------|
-| DJ-DETR (Ours) | **48.6%** |
+| BMR-DETR (Ours) | **48.6%** |
 
 ### Edge Deployment
 
@@ -41,7 +41,7 @@ Tomato foliar diseases pose a significant threat to crop yield and food safety w
 ## 📁 Project Structure
 
 ```
-DJ-DETR/
+BMR-DETR/
 ├── README.md
 ├── requirements.txt
 ├── models/
@@ -49,7 +49,7 @@ DJ-DETR/
 │   ├── mgat_net.py          # Multi-Scale Gradient-Aware Transfer Network
 │   └── rfam.py              # Retentive Feature Aggregation Module
 ├── configs/
-│   └── dj_detr.yaml         # Configuration file
+│   └── BMR_detr.yaml         # Configuration file
 ├── train.py                 # Training script
 ├── test.py                  # Testing script
 ├── inference.py             # Inference script
@@ -69,12 +69,12 @@ DJ-DETR/
 
 ```bash
 # Clone the repository
-git clone https://github.com/zhuojiaxiong6/DJ-DETR.git
-cd DJ-DETR
+git clone https://github.com/zhuojiaxiong6/BMR-DETR.git
+cd BMR-DETR
 
 # Create conda environment (recommended)
-conda create -n djdetr python=3.8 -y
-conda activate djdetr
+conda create -n BMRdetr python=3.8 -y
+conda activate BMRdetr
 
 # Install dependencies
 pip install -r requirements.txt
@@ -109,13 +109,13 @@ data/
 ### Training
 
 ```bash
-python train.py --config configs/dj_detr.yaml --data_path /path/to/dataset
+python train.py --config configs/BMR_detr.yaml --data_path /path/to/dataset
 ```
 
 ### Testing
 
 ```bash
-python test.py --config configs/dj_detr.yaml --checkpoint /path/to/checkpoint.pth
+python test.py --config configs/BMR_detr.yaml --checkpoint /path/to/checkpoint.pth
 ```
 
 ### Inference
@@ -128,7 +128,7 @@ python inference.py --image /path/to/image.jpg --checkpoint /path/to/checkpoint.
 
 | Model | Dataset | mAP50 | Download |
 |-------|---------|-------|----------|
-| DJ-DETR | M-TLD | 78.91% | [Baidu Pan](https://pan.baidu.com/s/1ESVJvIFqmVX--2dOu3FinA?pwd=r9s9) |
+| BMR-DETR | M-TLD | 78.91% | [Baidu Pan](https://pan.baidu.com/s/1ESVJvIFqmVX--2dOu3FinA?pwd=r9s9) |
 
 > **Baidu Pan Password**: `r9s9`
 
@@ -143,8 +143,9 @@ python inference.py --image /path/to/image.jpg --checkpoint /path/to/checkpoint.
 If you find this work useful for your research, please cite our paper:
 
 ```bibtex
-@article{zhuo2025djdetr,
-  title={DJ-DETR: Real-Time Tomato Leaf Disease Detection via Bidirectional Context Modeling and Gradient-Aware Perception},
+@article{zhuo2025BMR
+detr,
+  title={BMR-DETR: Real-Time Tomato Leaf Disease Detection via Bidirectional Context Modeling and Gradient-Aware Perception},
   author={Zhuo, Jiaxiong and Dong, Guikun and Li, Rui and Zhou, Lei and Zhao, Feixiong and Yang, Xiangjun},
   journal={The Visual Computer},
   year={2025},
