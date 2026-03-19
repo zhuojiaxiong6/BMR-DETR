@@ -1,4 +1,4 @@
-# BMR-DETR
+# DJ-DETR
 
 Official PyTorch implementation of **"BMR-DETR: A Real-Time Tomato Leaf Disease Detection Model for Edge Device Deployment"**
 
